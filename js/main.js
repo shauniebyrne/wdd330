@@ -1,6 +1,6 @@
 const links = [
     {
-      label: "Week1 notes",
+      label: "Week1 Notes",
       url: "week1/index.html"
     }
   ]
@@ -8,7 +8,7 @@ const links = [
 function loadIndex() {
     const ol = document.getElementById("linkslist");
 
-    links.forEach( link => {
+    links.forEach(link => {
         const li = document.createElement("li");
         const href = document.createElement("a");
         href.setAttribute("href", link.url);
