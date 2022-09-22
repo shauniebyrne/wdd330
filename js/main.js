@@ -9,10 +9,9 @@ const links = [
     }
   ]
 
-function loadIndex() {
-    const ol = document.getElementById("linkslist");
+const ol = document.getElementById("linkslist");
 
-    links.forEach( link => {
+links.forEach( link => {
         const li = document.createElement("li");
         const href = document.createElement("a");
         href.setAttribute("href", link.url);
@@ -20,7 +19,5 @@ function loadIndex() {
 
         li.appendChild(href);
         ol.appendChild(li);
-    });
-}
-
-loadIndex();
+    }
+  )
