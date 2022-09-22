@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Notes</title>
+</head>
+<body>
+    <h1>Week 2 Notes</h1>
+    <h2>Javascript: Novice to Ninja (Sitepoint) Book</h2>
+    <h3>Chapter 2: Programming Basics</h3>
+    <ul>
+        <li>remember to always place comments in JS so you know what the code
+            is supposed to do
+        </li>
+        <li>Javascript language is a lot like C Programming language (yep!!!)</li>
+        <li>JS is made of statements that end with a ;</li>
+        <li>Block: a series of statements that are collected together inside {}</li>
+        <li>Whitespace: spaces, tabs, new lines that are blank. Helps make reading code easier</li>
+        <li>Primitive Data Types: string, symbol, number, boolean, undefined, null</li>
+        <li>Object Data Types: arrays, functions, object literals</li>
+        <li>Operand: when an operator applies an operation to a key ex. typeof 'hello'; 
+            operator is typeof and operand is the string 'hello'
+        </li>
+        <li>Variables: used in programming languages to refer to a value stored in memory but must be declared; in JS
+            we use const or let (not usually var) to declare the variable and then name the 
+            variable whatever we want (a const variable value never changes, a let variable value can change)
+        </li>
+        <li>you can declare and assign multiple variables at the same time if you seperate them with a ,</li>
+        <li>const variable values can be changed if they are object Types
+            ex. const name = {value: 'Alexa'}; name.value = 'Siri' changed the name value from Alexa to Siri
+        </li>
+        <li>const and let only work in the block they are declared in, a local scope is inside a block or function,
+            a global scope can be used within the whole page (not declared in a block)
+        </li>
+        <li>global variables can be overwritten within a block, 
+            ex. let b = 2; {let b = 4; b;} the outcome is 4 when printing the b inside a block and 2 outside the block
+        </li>
+        <li>if you assign a variable within the block but don't decare it, the value has a global scope</li>
+        <li>use camel case to name variables ex. firstNameAndLastName</li>
+        <li>changing the value of referenced object changes the objects value too,
+            ex. const c = { value: 1}; let d = c; (referenced c.value=1 and d.value=1); d.value = 2 (d.value=2 and c.value=2)
+        </li>
+        <li>Properties: info about the object or value</li>
+        <li>Methods: perform an action on the object or value, end with parenthesis</li>
+        <li>you can use + to connect strings or just use teplate literals (I would use template literals, easier; ``</li>
+        <li>Template Literal: `` to connect all kinds of strings instead of '' + ''
+            ex. const name = `Siri`; `Hello ${name}!`; outcome: 'Hello Siri!'
+        </li>
+        <li>**What are symbols and why do we use them/need them?</li>
+        <li>numbers, whether they are integers (whole numbers) or floats (decimal) all are the same in JS</li>
+        <li>0x numbers: hexadecimal numbers often used for color codes, ex. 0xAF (A=10, F=15)</li>
+        <li>0o numbers: octal literals ex.0o47 (4 eights and 7 units</li>
+        <li>0b numbers: binary notation ex. 0b1010 (1 eith, 0 fours, 1 two and 0 units)</li>
+        <li>Exponential numbers: JS will do these ex.1e6 (1 * 10 ^ 6) = 1000000) or 2E3 (2 * 10^3) = 2000</li>
+        <li>Decimal numbers: created by using a negative index value ex. 2.5e-3 (2.5 * 10^-3) = 0.0252</li>
+        <li>I didn't know you could use compound assignment operators for subtraction, mulitplication, division, and remainders too</li>
+        <li>Infinity is used to represent a number that is too big for JS, -Infinity for a number too small</li>
+        <li>Nan error: not a number</li>
+        <li>Type Coercion is JS trying to put two different types together, best not to rely on this ex. '8' + 2; outpout:'28'</li>
+        <li>Convert strings to numbers by using the Number method ex. Number('23'); output 23</li>
+        <li>Convert numbers to strings by using the String method ex. String(3); ouptut: '3'</li>
+        <li>Truthy values: boolean values that come out true</li>
+        <li>Falsy values: boolean values that come out false (usually empty strings, empty template literals, 0, -0, NaN, false, null, undefined</li>
+        <li></li>
+    </ul>
+</body>
+</html>
