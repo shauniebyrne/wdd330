@@ -21,8 +21,3 @@ links.forEach( link => {
         ol.appendChild(li);
     }
   );
-
-// This adds a box on the website that you answer (just like when it warns you are leaving a site and makes sure you want to)
-//const question = "What is Superman's real name?";
-//const answer = prompt(question);
-//alert(`You answered ${answer}`);
