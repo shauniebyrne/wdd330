@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Team Activity</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input">
+        <button type="button" id="btn"> Button</button>
+        <input type="text" id="input2">
+        <button type="button" id="addBtn">+</button>
+        <div id="output-container"></div>
+    </form>
+    <script>
+       let addBtn = document.getElementById("addBtn");
+       addBtn.onclick = function () {
+        let inputNumber = parseInt(document.getElementById("input").value);
+        addNumbers(inputNumber);
+        let inputNumber2 = parseInt(document.getElementById("input2").value);
+        addAll(inputNumber, inputNumber2);
+
+        }
+        function addNumbers(number) {
+            let sum = 0;
+            if (!isNaN(number)){for(let i = 0; i <=number; i++){sum += i}};
+            document.getElementById("output-container").innerText = sum;
+            // const node = document.createElement("p");
+            // node.appendChild(sum);
+            // document.getElementById("output-container").appendChild(node);
+        }
+        function addAll(number,number2) {
+            if (!isNaN(number)&&!isNaN(number2)) {document.getElementById("output-container").innerText = number + number2};
+        }
+
+    </script>
+</body>
+</html>
