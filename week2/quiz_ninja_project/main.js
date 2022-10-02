@@ -3,7 +3,7 @@
 //const answer = prompt(question);
 //alert(`You answered ${answer}`);
 
-//creating a nested map
+//creating an object inside an array
 const quiz = new Map([
     ["What is Superman's real name?", "Clark Kent"],
     ["What is Wonder Woman's real name?", "Diana Prince"],

@@ -11,7 +11,7 @@
         <a href="../index.html">Home</a>
     </nav>
    <h1>Week 3 Notes</h1>
-   <h2>Please Note: </h2> 
+   <h2>Please Note: Focused my time more on notes but did all excercises in the readings too as well as JavaScript30, this code sandbox, and W3Resource </h2> 
    <h2>Object Methods: this</h2>
    <ul>
     <li>Method: functions that are stored in object properties</li>
@@ -37,7 +37,51 @@
    <h2>Javascript: Novice to Ninja (Sitepoint)</h2>
    <h3>Chapter 5: Objects</h3>
    <ul>
-    <li></li>
+    <li>Object: self contained set of related values and functions</li>
+    <li>** Just clicked - a method is a built in function</li>
+    <li>Object Literal: object made in Javascript with key:value pairs using {};</li>
+    <li>Symbol: key in an object with [] around it, also used as bracket notation to call the value of the key - use this when having lots of keys </li>
+    <li>When calling a method, don't forget the () after</li>
+    <li>Nested Objects: an object in an object</li>
+    <li>Use 'this' inside methods to gain access to the object's properties</li>
+    <li>JSON: JavaScript Object Notation; data-storage format</li>
+    <li>Math Object is a built-in object that can be used in JS (as well as Python) - doesn't need to be called though like it does in Python</li>
+    <li>Math object's constants are called by using dot notation and are all caps</li>
+    <li>Getter Methods: how you access Date Object information</li>
+    <li>Epoch: January 1st, 1970; this is an arbitrary date that is used in programming as a reference point in time</li>
+    <li>UTC: Coordinated Universal Time; time standard by with the world regulates their clocks</li>
+    <li>RegExp Ojbect: regular expression object; used to search strings for matches to the pattern</li>
+    <li>Capturing Groups: sub-patterns created inside a regular expression by placing them inside prantheses</li>
+   </ul>
+   <h3>Chapter 6: Document Object Model</h3>
+   <ul>
+    <li>DOM: Document Object Model; allows ou to access elements of a web page and enable interactions with the page to change its apperance
+        (adding and removing elements, changing order, content and elements, altering style). Represents an HTML document as a network of
+        connected nodes that form a tree-like structure. Treats everything on a web bape as a node.
+    </li>
+    <li>Access the HTML document in JS by using the special built-in object called document (***why we use: document.getElementById() and other things</li>
+    <li>Scripts inserted using innerHTML wont run</li>
+    <li>A good rule when naming variables, classes, id's, etc. is to use CamelCase</li>
+    <li>Can make changes to the web page using the console - works the same as JS</li>
+   </ul>
+   <h3>Chapter 7: Events</h3>
+   <ul>
+    <li>Events: another part of the DOM; are what provides the link between the web page and user interactions. "Every time a user interacts with a web page, such
+        as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to.
+    </li>
+    <li>Event Listeners: like setting a notification to alert you when something happens (when a user does something on the web page)</li>
+    <li>Every time a page is clicked, a call back function is called - this allows the rest of the program to run while waiting for something to be clicked</li>
+    <li>Click Event: works when mouse is clicked, enter is pressed, or screen is tapped</li>
+    <li>Event as a Parameter: many developers often abbreviate the word event to just an 'e' </li>
+    <li>Add an event listener to the whole web page by not putting document before the addEventListener</li>
+    <li>Use "document" first when you are trying to do things to the HTML, use a variable when trying to do things within the JS</li>
+    <li>Do not use anonymous functions as an argument to an addEventListener if you want to remove it later with removeEventListener (they need to both reference the same function</li>
+    <li>Think carefully before using the preventDefault() method because users expect certain things to happen and preventing them can cause confusion (like a link not going to the link when clicked</li>
+    <li>An event "propagates" as it moves from one element to another</li>
+    <li>Event Propagation: is the order that the evengs fire on each element; two kinds: bubbling and capturing</li>
+    <li>Bubbling: when event fires on element clicked on first then bubbles up the document tree, firing an even ton each parent element until it reaches the root node (usually the html)</li>
+    <li>Capturing: starts by firing an event on the root element, then propagates downward, firing an event on each child element until it reaches the targeted element that was clicked on</li>
+    <li>Event Delgation: used to attach an event listener to a parent element in order to capture events triggered by its child elements</li>
    </ul>
 </body>
 </html>
