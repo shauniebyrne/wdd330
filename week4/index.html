@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>Week 4 Notes
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
+   <h1>Week 4 Notes</h1>
+   <h2>Please Note:  </h2> 
+   <h2>JavaScript: Novice to Ninja (Sitepoint)</h2>
+   <h3>Chapter 8: Forms</h3>
+   <ul>
+    <li>Googles home page is a form and most of us use fors everyday to log into sites</li>
+    <li>Form element is how you start a form</li>
+    <li>Traditionally a form was created in front end and processesc using backend, but JS can process a form before it is sent to a server</li>
+    <li>document.form accesses all of the forms in html in the order they appear; use it by going const form = document.forms[0]; to access the first form
+        This is equivalent to const form = document.getElementByTagname('form')[0];
+        OR access the form using the name of the form const form = document.forms['search']; search is the name of the form (form name='search')
+    </li>
+    <li>Access the forms element by calling their names, ex. const input = form['searchInput'] (searchInput is the name='' of the input field</li>
+    <li>Finally figured out what focusing an element in a form does: places the curser line in the element box when clicked</li>
+    <li>Change event and blur event work around each other. If a change occurs in the element, the change event is used, if a different element is clicked without making
+        changes to the first element, the blur event is used.
+    </li>
+    <li>Possibly the most important form event is the submit event.</li>
+    <li>If you use the dot method to call a form, you don't need a bunch of classes or ids (ex. const form = documents.forms['search']; search is the forms name</li>
+    <li>Forms input fields (most common types of form control) include text, passwords,check boxes, radio buttons, file uploads (I love that they validate automatically for us)</li>
+    <li>Forms select menus for drop-down lists of options</li>
+    <li>Forms textarea elements are for longer test entries</li>
+    <li>Forms button elements are for submitting and resetting forms</li>
+    <li>Like using placeholders so the user knows what to expect when filling out the input field</li>
+    <li>With input, text is the default so you don't necessarily have to add type='text' but it is recommended to do so anyway to make things clear</li>
+    <li>With input, the value attribute presets the initial value of the field</li>
+    <li>Check boxes are used when you want the user to be able to pick more than one option</li>
+    <li>IMPORTANT: check boxes and radio buttons need to have inputs all with the same name so that they all connect to each other  and both need to have their values set</li>
+    <li>When using JS, check boxes are iterated over usinG a for loop and are boolean properties (true if checked, false if not checked)</li>
+    <li>Radio buttons are used when you want the user choose only one choice (usually used with only 5 choices or less)</li>
+    <li>Data in a hidden filed (type='hidden') isn't secret (visible in HTML) but rather the 'value' is submitted with the form but not displayed by the browser.
+        Are often used to send info. such as settings or info. that the user has alread provided.
+    </li>
+    <li>Select drop down lists can be used to select from a number of options. 
+        The 'multiple' attribute is required if more than one option is to be selected
+    </li>
+    <li>Set the value of a textarea by putting what you want said between the opening and closing tags</li>
+    <li>The default type for a button is submit</li>
+    <li>Type='reset' resets the form to their initial settings. Use wisely because the user could accidentaly press this and then have to start all over again</li>
+    <li>Type='button' can be used outside of a form and simply just makes a clickable button that can have an addEventListener attached to it</li>
+    <li>It is important to validate using JS and the built in validation. HTML5 has its own validation API. Use this by adding 'required' to all fields that must be filled in</li>
+    <li>Disabling the submit button makes it so users can't submit a form without first filling in all required fields correctly</li>
+    <li>Forms are primary method for entering data into a browser</li>
+</body>
+</html>
