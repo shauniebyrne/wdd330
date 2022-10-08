@@ -12,9 +12,13 @@
         <a href="practice/hero.html">Hero Practice</a>
         <a href="practice/search.html">Search Practice</a>
         <a href="quiz_ninja_project/index.html">Quiz Ninja Practice</a>
+        <a href="ch15_quiz_ninja_project/index.html">Chapter 15 Quiz Ninja Practice</a>
+        <a href="team_assignment/index.html">Team Assignment</a>
+        <a href="practice/MVC/list.html">MVC Practice</a>
     </nav>
    <h1>Week 4 Notes</h1>
    <h2>Please Note: Any practice I did is found above. I was able to balance my time between reading and practice this week. </h2> 
+   <h2>Question I have: Why is the libraries not working in VS Code??</h2>
    <h2>JavaScript: Novice to Ninja (Sitepoint)</h2>
    <h3>Chapter 8: Forms</h3>
    <ul>
@@ -89,12 +93,45 @@
     </li>
     <li>**Never use arrays or ojbects as a default value in prototype!!**</li>
     <li>**Just like in Python, make properties and methods private in a class by using the underscore before naming the property (ex. let _color = color;)</li>
-    <li></li>
+    <li>Properties of objects in JS are said to be enumerable or non-enumberable (will not show up in a for-in loop)</li>
+    <li>All properties and methods that are created by assignment are enumerable</li>
+    <li>Good practice is for all built-in methods to be non-enumerable, adn any user-defined methods to be made enumerabel</li>
+    <li>A class can inherit from another class using the 'extends' keyworkd in a class declaration.</li>
+    <li>The toString() method is a good demonstration of polymorphism, since dirrerent objects have the same method but use it differently</li>
+    <li>Monkey-patching is adding more methods to prototypes of JS built-in-objects</li>
+    <li>Difference between shallow copies and hard copies, shallow copies change the original, hard copies make a whole new copy and therefore leave the original alone</li>
+    <li>Factory functions: a function that can be used to return an object</li>
+    <li>Gorilla Banana Problem: problem with inheriting classes, you get the whole class rathar than just the method you want.</li>
+    <li>If you do use classes in JS, it is recommended that you make them 'skinny' (they don't have too many properties and methods)</li>
    </ul>
-   <p>Class Practice Example: Look at Console because this is all done in JS<script src="../week4/practice/classOOP_example.js"></script></p>
    <h3>Chapter 15: Modern Javascript</h3>
    <ul>
+    <li>JQuery is the most popular of all the JS libraries</li>
+    <li>For instance, classList isn't supported in older versions but addClass() in JQuery is accepted in all versions</li>
+    <li>$ symbon is associated with the global jQuery and contains all of its methods</li>
+    <li>Underscore and Lodash are similar libraries (ex. _.flatten[])</li>
+    <li>Some believe Libraries should not be used, it is known that just JS runs code faster than using Libraries</li>
+    <li>However, Libraries save time when you have a big project with a large team</li>
+    <li>**Remeber: when using Libraries, they can fall out of favor and discontinue at any time, then your program wont work</li>
+    <li>Monolithic: Libraries that have a plethora of methods that try to do everything. Ex. jQuery</li>
+    <li>Should only use Libraries to speed up JS developemnt by making it easier to complete common tasks, not because you don't understand JS</li>
+    <li>Module: a self-contained pice of code that provides functions and methods that can then be used in other files and by other modules</li>
+    <li>Module tips: code in modules are in strict mode, module is its own global scope - variables created in the module will only work within it, top value of this is undefined instead of the global object, can't use HTML style comments in modules</li>
+    <li>If you want to import the whole module use the * (ex. import * as stats from './stats.js';)</li>
+    <li>Defualt Exports: refer to a single variable, function, or class in a module that can be imported without having to be explicitly named</li>
+    <li>Having more than one default export will cause a syntax error</li>
+    <li>MVC: Model-View-Controller</li>
+    <li>MVC seperates an application into three components: models, views, and controllers</li>
+    <li>Models: objects that implement the functionality for creating, reading, updating, and deleting specific pieces of info about the application</li>
+    <li>Views: provide a visual representation of the model showing all the relevant info</li>
+    <li>Controllers: link models and views together by communicating between them</li>
+    <li>Templating languages make code between JS and HTML easy</li>
+    <li>React is JS library created by Facebook and is used by BBC, PayPal, and Netflix</li>
+    <li>Reconciliation: DOM only updated when changes are made</li>
+    <li>Package: a directory with one or more files of code</li>
+    <li>npm: Node Package Manager</li>
     <li></li>
    </ul>
+   <p>Class Practice Example: Look at Console because this is all done in JS<script src="../week4/practice/ch12_ch15_js_practice.js"></script></p>
 </body>
 </html>
