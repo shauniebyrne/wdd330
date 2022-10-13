@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Notes</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>  
+    </nav>
+   <h1>Week 5 Notes</h1>
+   <h2>Please Note: I spent more time on practice and our assignment than reading this week. </h2> 
+   <h2>JavaScript: Novice to Ninja (Sitepoint)</h2>
+   <h3>Chapter 10: Testing and Debugging</h3>
+   <ul>
+    <li>Errors and bugs are a fact of life in programming</li>
+    <li>Three causes of errors: system error, programmer error, or user error</li>
+    <li>Interesting that a user error could be considered a programmer error because the site should be user friendly</li>
+    <li>Exceptions: an error that produces a return value that can then be used by the program to deal with the error (ex. something not defined)</li>
+    <li>Stack traces: a sequence of function or method calls that lead to the point where the error occured; traces all occurances of the error back to the original error so you can see where the error started.</li>
+    <li>Warnings: occurs if there is an error in the code that isn't enough to cause the program to crash.</li>
+    <li>put: 'use strict'; at top of JS to ensure you debug using strick mode and not sloppy </li>
+    <li>Linting tools (JS Lint, JS Hint, ES Lint) are useful with enforcing a programming style guide which is particularly useful when working in teams to make sure all team members are using the same conventions.</li>
+    <li>Debugging: the process of finding out where bugs occur in the code and then dealing with them.</li>
+    <li>Console.log is widely used to see what a variable is while debugging.</li>
+    <li>debugger keyword: stops the running of the code at certain breakpoints and you can hover over the variables and see their values</li>
+    <li>RangeError: thrown when number is outside allowable range of values</li>
+    <li>ReferenceError: thrown when a reference is made to an item that doesn't exist</li>
+    <li>SyntaxError: thrown when there's an error in the code's syntax</li>
+    <li>TypeError: thrown when there's an error in the type of value used (ex. string instead of number)</li>
+    <li>Can specify what error code should say in JS (just like in Python)</li>
+    <li>An exception causes the program to terminate with an error message (good for debuggin) however, it will cause a program to crash, not wanted in a final product</li>
+    <li>Testing: can simply be a function that tests if a piece of code runs as it should.</li>
+    <li>TDD: Test Driven Development; process of writing tests before any actual code</li>
+    <li>Jest is a built in TDD framework created by Facebook</li>
+    <li>Bugs are unavoidable and better to find early rather than later.</li>
+    <li>Exceptions can be thrown using the throw statement.</li>
+    <li>An error object is created when an exception occurs.</li>
+    <li>**Any code placed inside a try{} block will pass any error objects to a catch block when an exception occurs.</li>
+    <li>**Any code inside a finally {} block will run if an exception does or does not occur.</li>
+   </ul>
+</body>
+</html>    
