@@ -6,9 +6,11 @@ const myList = document.querySelector('.list');
 addTaskButton.addEventListener('click', function() {
     let input = myInput.value;
     myInput.value = '';
+    const checkButton = document.createAttribute('button');
     const listValue = document.createElement('li');
     const deleteButton = document.createElement('button');
 
+    checkButton.innerHTML = '&#9745;';
     listValue.textContent = input;
     deleteButton.innerHTML = '&#9746;';
 
