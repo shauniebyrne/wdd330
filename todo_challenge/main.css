@@ -1,0 +1,112 @@
+/* font-family: 'Roboto Mono', monospace; */
+/* colors: Tyrian Purple #6A0136, Old Gold #BFAB25,
+/*         Maroon X11 #B81365, Ming #026C7C */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+}
+
+h1, h2, h3 {
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: #026C7C;
+}
+
+p {
+    color: #6A0136;
+}
+
+img {
+    margin-left: 75px;
+    width: 300px;
+}
+
+#weekday {
+    color: #6A0136;
+    font-weight: bold;
+}
+
+#schedule {
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+
+main section {
+    margin: 0.5rem auto;
+    border: 5px solid #6A0136;
+    padding: 0.5rem;
+    background-color: rgba(191, 171, 37, 0.5);
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95%;
+}
+
+input, button {
+    padding: 0.35rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: #B81365;
+}
+
+input {
+    width: 275px;
+}
+
+label {
+    font-size: 1.5rem;
+    color: #026C7C; 
+    font-weight: bold;
+}
+
+.listcontainer {
+    border: 2px solid #6A0136;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.list {
+    margin: 0.2rem;
+}
+
+section ul {
+    margin: 1rem;
+    list-style: none;
+}
+
+section li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+footer strong {
+    color: #026C7C;
+}
+
