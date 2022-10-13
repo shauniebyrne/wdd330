@@ -16,42 +16,16 @@ body {
     font-family: 'Roboto Mono', 'Courier New', monospace;
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 1.75rem;
+    text-decoration: underline;
+    color: #026C7C;
     padding-bottom: 0.5rem;
     text-align: center;
 }
 
-h1 {
-    font-size: 1.75rem;
-}
-
-h2 {
-    font-size: 1.6rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    color: #026C7C;
-}
-
 p {
     color: #6A0136;
-}
-
-img {
-    margin-left: 75px;
-    width: 300px;
-}
-
-#weekday {
-    color: #6A0136;
-    font-weight: bold;
-}
-
-#schedule {
-    margin-left: 6rem;
-    margin-bottom: 1rem;
 }
 
 main section {
@@ -86,27 +60,39 @@ label {
 
 .listcontainer {
     border: 2px solid #6A0136;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 .list {
     margin: 0.2rem;
 }
 
-section ul {
-    margin: 1rem;
+div ul {
+    margin: 0.25rem;
     list-style: none;
 }
 
-section li {
+div ul li.border-help {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid #6A0136;
+    margin: 0.25rem;
+}
+
+ul li.border-help > li {
+    flex-grow: 3;
+    padding: 0.25rem;
 }
 
 footer strong {
     color: #026C7C;
+}
+
+.cross-out {
+    text-decoration: line-through;
 }
 
