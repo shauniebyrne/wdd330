@@ -5,10 +5,10 @@ const myInput = document.getElementById('todo');
 const addTaskButton = document.getElementById('add-task');
 const myList = document.querySelector('.list');
 let toDoList = new Array();
-const incompleteTasksList = document.getElementById('incomplete-tasks');
-const completedTasksList = document.getElementById('completed-tasks');
-const incomplete = document.getElementById('incomplete');
-const complete = document.getElementById('complete');
+const incompleteTasksButton = document.getElementById('incomplete-tasks');
+const completedTasksButton = document.getElementById('completed-tasks');
+const incompleteDiv = document.getElementById('incomplete');
+const completeDiv = document.getElementById('complete');
 
 addTaskButton.addEventListener('click', function() {
     let id = Date.now();
@@ -44,15 +44,15 @@ addTaskButton.addEventListener('click', function() {
         listValue.classList.add('cross-out');
         newItem.complete = true;
     });
-
+    //send curser in input label
     myInput.focus();
 })
 
 //Incomplete Tasks button
-incompleteTasksList.addEventListener('click', function() {
+incompleteTasksButton.addEventListener('click', function() {
     //toggle out completed list and put in incomplete list
-    complete.classList.add('hidden');
-    incomplete.classList.remove('hidden');
+    completeDiv.classList.add('hidden');
+    incompleteDiv.classList.remove('hidden');
 
 
     //display incomplete task list
@@ -72,48 +72,54 @@ incompleteTasksList.addEventListener('click', function() {
         listContainer.appendChild(listValue);
 
         //place ul in div
-        document.getElementById('incomplete').appendChild(listContainer);
+        incompleteDiv.appendChild(listContainer);
 
         deleteButton.addEventListener('click', function() {
             listContainer.removeChild(listValue);
         });
-    completedTasksList.addEventListener('click', function() {
-        incomplete.removeChild(listContainer);
     });
+
+    //remove list so it can create another list (so it doesn't repeat items)
+    completedTasksButton.addEventListener('click', function() {
+        
+        
     });
 })
 
 //Completed Tasks button
-completedTasksList.addEventListener('click', function() {
+completedTasksButton.addEventListener('click', function() {
     //Toggle out incomplete list and put in complete list
-    incomplete.classList.add('hidden');
-    complete.classList.remove('hidden');
+    incompleteDiv.classList.add('hidden');
+    completeDiv.classList.remove('hidden');
     
     //display complete task list
     let completedList = toDoList.filter(item => item.complete == true);
     completedList.forEach(input => {
         const listContainer = document.createElement('ul');
         const listValue = document.createElement('li');
+        const togetherLi = document.createElement('li');
         const deleteButton = document.createElement('button');
         listValue.classList.add('cross-out');
-        listValue.classList.add('border-help');
+        togetherLi.classList.add('border-help');
 
         //create input for buttons and list
         listValue.textContent = input.content;
         deleteButton.innerHTML = '&#9746;';
 
         //place all buttons and value in an li then in ul
-        listValue.appendChild(deleteButton);
-        listContainer.appendChild(listValue);
+        togetherLi.appendChild(listValue);
+        togetherLi.appendChild(deleteButton);
+        listContainer.appendChild(togetherLi);
 
         //place ul in div
-        document.getElementById('complete').appendChild(listContainer);
+        completeDiv.appendChild(listContainer);
 
         deleteButton.addEventListener('click', function() {
             listContainer.removeChild(listValue);
-        });
-    incompleteTasksList.addEventListener('click', function() {
-        complete.removeChild(completedList);
+        });  
     });
+
+    incompleteTasksButton.addEventListener('click', function() {
+        
     });
 })
