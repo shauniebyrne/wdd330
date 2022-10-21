@@ -7,8 +7,7 @@
     <title>To Do List Challenge</title>
     <meta name="description" content="Week 5 and 6, Challenge One: Creating a simple
     ToDo App">
-    <script defer src="js/utilities.js"></script>
-    <script defer src="js/todos.js"></script>
+    <script type="module" src="js/todos.js"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,22 +20,28 @@
         </nav>
         <h1>ToDo Check List: &#10004;</h1>
         <section>
+            <h2>All Tasks:</h2>
             <div class="listcontainer">
                 <ul class="list">
-
                 </ul>
             </div>
+        </section>
+        <button id="incomplete-tasks" type="button">Incomplete Tasks</button>
+        <button id="completed-tasks" type="button">Completed Tasks</button>
+        <section>
+            <div id="incomplete"></div>
+            <div id="complete"></div>
         </section>
         <section>
             <div class="input">
                 <label>To Dos:<br>
                     <input type="text" id="todo"></label>
-                <button aria-label="Remove" type="submit"><strong>Add Task</strong></button>
+                <button id="add-task" aria-label="Remove" type="submit"><strong>Add Task</strong></button>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="year"></span> .:|:. <strong>Shauntal Byrne</strong> .:|:. WDD330 .:|:. Week 5/6 Project</p>
+        <p>October 2022 || <strong>Shauntal Byrne</strong> || WDD330 || Week 5/6 Project</p>
     </footer>
 </body>
 </html>

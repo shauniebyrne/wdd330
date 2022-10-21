@@ -48,18 +48,22 @@ button {
     background-color: #B81365;
 }
 
+#incomplete-tasks, #completed-tasks {
+    margin-left: 50px;
+    font-weight: bold;
+}
+
 input {
     width: 275px;
 }
 
-label {
+label, h2 {
     font-size: 1.5rem;
     color: #026C7C; 
     font-weight: bold;
 }
 
 .listcontainer {
-    border: 2px solid #6A0136;
     margin: 0.5rem;
     padding: 0.5rem;
 }
@@ -86,6 +90,14 @@ div ul li.border-help {
 ul li.border-help > li {
     flex-grow: 3;
     padding: 0.25rem;
+}
+
+#incomplete.hidden, #complete.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 85px;
 }
 
 footer strong {

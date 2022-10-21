@@ -1,4 +1,9 @@
-const date = new Date();
-const year = date.getFullYear();
+class ToDoItems {
+    constructor(id, content, complete) {
+        this.id = id;
+        this.content = content;
+        this.complete = complete;
+    }
+}
 
-document.querySelector('#year').textContent = year;
+export {ToDoItems};
