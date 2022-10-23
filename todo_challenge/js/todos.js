@@ -38,13 +38,15 @@ addTaskButton.addEventListener('click', function() {
 
     deleteButton.addEventListener('click', function() {
         myList.removeChild(allTogether);
+        toDoList.pop();
     });
 
     checkButton.addEventListener('click', function(e) {
         listValue.classList.add('cross-out');
         newItem.complete = true;
     });
-    //send curser in input label
+
+    //send curser in input label everytime so user doesn't have to
     myInput.focus();
 })
 
@@ -77,13 +79,12 @@ incompleteTasksButton.addEventListener('click', function() {
         deleteButton.addEventListener('click', function() {
             listContainer.removeChild(listValue);
         });
-    });
 
-    //remove list so it can create another list (so it doesn't repeat items)
-    completedTasksButton.addEventListener('click', function() {
-        
-        
-    });
+        //remove list so it can create another list (so it doesn't repeat items)
+        completedTasksButton.addEventListener('click', function() {
+            incompleteList.pop()
+        });
+    });  
 })
 
 //Completed Tasks button
@@ -115,11 +116,12 @@ completedTasksButton.addEventListener('click', function() {
         completeDiv.appendChild(listContainer);
 
         deleteButton.addEventListener('click', function() {
-            listContainer.removeChild(listValue);
-        });  
-    });
-
-    incompleteTasksButton.addEventListener('click', function() {
+            listContainer.removeChild(togetherLi);
+        }); 
         
-    });
+        //remove list so it doesn't repeat
+        incompleteTasksButton.addEventListener('click', function() {
+            completedList.pop();
+        });
+    }); 
 })
