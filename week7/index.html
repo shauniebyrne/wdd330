@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Notes</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>  
+        <a href="team_assignment/index.html">Team Assignment</a>
+        <a href="practice/ajax.html">Ajax Practice</a>
+        <a href="practice/todo.html">To Do List Ajax Practice</a>
+        <a href="quiz_ninja/index.html">Quiz Ninja</a>
+    </nav>
+   <h1>Week 7 Notes</h1>
+   <h2>Please Note: I spent more time on practice, our assignment, and JavaScript 30 practice than reading this week. See samples above </h2> 
+   <h2>JavaScript: Novice to Ninja (Sitepoint)</h2>
+   <h3>Chapter 11: Further Functions</h3>
+   <ul>
+        <li>In JS, functions are first-class objects (they can be passed around in the same way as every other value)</li>
+        <li>cashe property saves results in an object to be used (or returned) later</li>
+        <li>IIFE: Immediately Invoked Function Expression (an anonumous function that is invoked as soon as it's defined)</li>
+        <li>Rercursive function: one that invokes itself until a certain conditin is met</li>
+        <li>Callbacks: functions passed to other functions as arguments and then invoked inside the function they are passed to</li>
+        <li>Callbacks must wait for teh current execution stack to complete before it's invoked no matter what wait time you give it</li>
+        <li>Promise: represents the futre result of an asynhronious (code runs out of order) operation</li>
+        <li>A promise is created using a constructor function which akesa function called an executor as an argument. This initializes the promise around starts
+            the asynchronous operation. It also accepts two functions as arguments: resolve()function if operation is succesful and reject() function if operation fails.
+            Example, const promise = new Promise( (resolve, reject) => { code then if(success) {resolve(value); else { reject(error);}});
+        </li>
+        <li>Once a promise has been settled (processed), a then() method can be used to deal with the outcome</li>
+        <li>Async Functions: allow you to write asynchronous code as if it was synchronous; this is achieved using await operator before an asynchronous function
+            Example: async function loadgame(userName) { try { const user = await login(userName); const info = await getPlayInfo (user.id);} catch(error) {throw error;}}
+        </li>
+        <li>Abstraction: all logic is cleanly wrapped away inside the function</li>
+        <li>To make use of a function that is returned, you asign it a variable</li>
+        <li>Closures: (one of JS most powerful features) a reference to a variable that was created inside the scope of function but is able to be kept alive and used in another part of the program</li>
+        <li>Generator functions: special functions used to produce iterators that maintain the state of a value; us an sterisk symbol (*) and place it after the function declaration (example function* exampleGenerator() {})</li>
+        <li>Generator functions us yield instead of return because the value is stored not calucated, you call that stored value by using the next() method (example const sequence = fibonacci(1,1); sequence.next() << 2</li>
+        <li>Functional programming is a programming pardigm (just like ojbect oriented programming and precedural programming)</li>
+        <li>Non-destructive data transformation: value stored in a variable remains the same evern after it has been passed through a function as an argument (using const on a variable is a good way to do this)</li>
+        <li>Functional programming uses pure functions (rely only on its arguments for its return value, no side-effects - doesn't change data anywhere else in the program, referential transperancy - will always returne the same result)
+             as the building blocks of a program</li>
+        <li>Function Composition: combining pure functions together to complete more complex tasks</li>
+        <li>Higher-Order Functions: functions that accept another function as an argument, or return another function as a result, or both</li>
+        <li>Currying: process that invloves the partial application of functions; a function is curried when not all arguments have been supplied to the function, so it returns another function that retains the arguments already provide,
+            and expects the remaining arguemnts that were omitted when the original function was called
+        </li>
+    </ul>
+    <h3>Chapter 13: Ajax</h3>
+    <ul>
+        <li>Ajax: a technique that allows web pages to communicate asynchronously with a server</li>
+        <li>Ajax dynamically updates web pages without reloading; this allows datea to be sent and received in the background, as well as portions of a page being updated in response to user events, while the rest of the program continues to run.</li>
+        <li>CORS: Cross Origin Resource Sharing</li>
+        <li>A server is required when requesting resources using Ajax</li>
+        <li>Ajax: Asynchronous JavaScript and XML</li>
+        <li>Asynchronous: when a request data is sent, the program doesn't have to stop and wait for the response, it keeps runing. Callbacks are a great way to manage this</li>
+        <li>JavaScript: Ajax enabled JS to send request and receive reponses from the server, allowing content to be update in real time (not just a front-end language anymore)</li>
+        <li>XML Documents: used to return data; JSON is most commonly used</li>
+        <li>API's = Application Programming Interface: a collection of methods that allows external acces to another program or service</li>
+        <li>Fetch API = has one mandatory argument, the URL of the resource you wish to fetch. Then you use the .then(code that handles the response) or .catch(code that runs if server returns an error)</li>
+        <li>Response Interface: deals with the object that's returned when the promise (fetch api) is fulfilled. Example: fetch(url).then((response) => {if(response.ok) {return response;} throw Error(response.statusText);}).then(response => code needed to do something).catch(error => console.log('There was an error!'))</li>
+        <ul>
+            <li>Text method: transforms text stream into JS string. Example: fetch(url).then(response => response.text());.then(text => console.log(text))</li>
+            <li>Blob method: used to read a file of raw data (like an image or a spreadsheet). Example: fetch(url).then(response => response.blob());.then(blob => console.log(blob.type))</li>
+            <li>Json method: (most common) used to deal with ajax responses by transforming a stream of JSON data into a promise that resolves to a JS object. Example: fetch(url).then(response => response.json());.then(data => console.log(Object.entries(data))). The response.json() transforms the JSON data into JS object</li>
+        </ul>
+        <li>Request Interface:gives more fine-grained control over the request being made by providing the request object as an argument</li>
+        <li>Request objects are made using the request constructor and include the following properties (keys):</li>
+        <ul>
+            <li>url - URL of requested resource (only property that is required)</li>
+            <li>method - string that specifies which HTTP method should be used for the request (default is 'GET'). There is also "POST", 'PUT', 'PATCH', 'DELETE'</li>
+            <li>headers - Headers object that provides details of the request's headers</li>
+            <li>mode - specifies if CORS is used or not (default CORS is used)</li>
+            <li>cache - specifies how the request will use the broswer's cache</li>
+            <li>credentials - specifies if cookies should be allowed with the request</li>
+            <li>redirect - specifies what to do if the response returns a redirect; three choices: 'follow'(redirect is followed), 'error'(an error is thrown), 'manual'(user clicks on the link to follow the redirect)</li>
+        </ul>
+        <li>HTTP: Hypertext Transfer Protocol: web built on this</li>
+        <li>Headers Interface: (HTTP headers) used to pass on any additional info about a request or response. Typically contains file-type of the resource, cookie info, authentication info, and when the resource was last modified</li>
+        <li>Properties and methods used to access info about headers and edit header info</li>
+        <ul>
+            <li>has() - used to check if the headers object contains the header provided as an argument</li>
+            <li>get() - returns the value of the header provided as an argument</li>
+            <li>set() - used to set a value of an already exisitng header or create a new header with the value provided as an argument (headers.set('header name', 'header value');)</li>
+            <li>append() - adds a new header to the object (headers.append('header(key)', 'header value (value)'</li>
+            <li>delete() - removes the header provided as an argument</li>
+            <li>keys(), values(), entries() - iterators that can be used to iterate over the headers key, value or entries (key and value pairs) Example: for (const entry of headers.entries(){console.log(entry);}</li>
+        </ul>
+        <li>Form Data Interface: makes it easier to submit info in forms using Ajax</li>
+        <ul>
+            <li>FormData instance is created using a constructor function, const data = new FormData();</li>
+            <li>Using a form as an arugument has the form data instance serailizing all the data automatically, ready to be sent using Ajax </li>
+            <li>Makes coding cleaner and easier since you don't have to do it manually, when submitting forms</li>
+            <li>Add data to the form data instance as key-value pairs using append() method. Example: data = new FormData(); data.append('height', 75);</li>
+            <li>Really helpful when a form contains files to upload, makes this task simple by automatically creating the necessary settings required</li>
+        </ul>
+        <li>Living Standard: at the time of writing (which means that the specification is being developed 'in the wild' - Fetch API is this; in other words this is still being deveoped and could change</li>
+    </ul>
+</body>
+</html>    
