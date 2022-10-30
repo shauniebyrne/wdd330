@@ -12,7 +12,6 @@ const incompleteDiv = document.getElementById('incomplete');
 const completeDiv = document.getElementById('complete');
 
 addTaskButton.addEventListener('click', function() {
-    toDoList = loadList();
     let id = Date.now();
     let input = myInput.value;
     let complete = false;
@@ -56,7 +55,6 @@ addTaskButton.addEventListener('click', function() {
         listValue.classList.add('cross-out');
         const found = toDoList.findIndex(element => element.content == input);
         toDoList[found].complete = true;
-        console.log(toDoList[found]);
         savedList(toDoList);
     });
 
@@ -97,7 +95,7 @@ incompleteTasksButton.addEventListener('click', function() {
 
         //remove list so it can create another list (so it doesn't repeat items)
         completedTasksButton.addEventListener('click', function() {
-            incompleteList.pop();
+            incompleteList.pop()
             const incompleteItems = document.querySelectorAll('.incomplete');
             incompleteItems.forEach(item => item.remove());
         });
