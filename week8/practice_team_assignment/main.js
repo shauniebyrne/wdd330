@@ -1,15 +1,22 @@
-const url = 'https://swapi.dev';
-const request = new Request (url, {
-    mode: 'non-cors'
-})
+const url = 'https://swapi.dev/api/people/';
 
-fetch(request)
-    .then(response => response.json())
-    .then(function(jsonObejct) {
-        const info = jsonObejct['directory'];
+fetch(url)
+    .then(function (response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        } else {
+            return response.json();
+        }
+    })
+    .then(function response (jsonObject) {
+        const info = jsonObject['results'];
     
         info.forEach(displayInfo);
+        console.log(info);
     })
+    .catch(function (error) {
+        console.log(error);
+    });
 
 function displayInfo(info) {
     //create Elements
