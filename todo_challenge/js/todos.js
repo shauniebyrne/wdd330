@@ -67,6 +67,7 @@ incompleteTasksButton.addEventListener('click', function() {
     //toggle out completed list and put in incomplete list
     completeDiv.classList.add('hidden');
     incompleteDiv.classList.remove('hidden');
+    incompleteDiv.innerHTML = '';
 
     //display incomplete task list
     toDoList = loadList();
@@ -95,7 +96,7 @@ incompleteTasksButton.addEventListener('click', function() {
 
         //remove list so it can create another list (so it doesn't repeat items)
         completedTasksButton.addEventListener('click', function() {
-            incompleteList.pop()
+            incompleteList.innerHTML = '';
             const incompleteItems = document.querySelectorAll('.incomplete');
             incompleteItems.forEach(item => item.remove());
         });
@@ -107,7 +108,8 @@ completedTasksButton.addEventListener('click', function() {
     //Toggle out incomplete list and put in complete list
     incompleteDiv.classList.add('hidden');
     completeDiv.classList.remove('hidden');
-    
+    completeDiv.innerHTML = '';
+
     //display complete task list
     toDoList = loadList();
     let completedList = toDoList.filter(item => item.complete == true);
@@ -138,7 +140,7 @@ completedTasksButton.addEventListener('click', function() {
         
         //remove list so it doesn't repeat
         incompleteTasksButton.addEventListener('click', function() {
-            completedList.pop();
+            completedList.innerHTML = '';
             const completedItems = document.querySelectorAll('.completed');
             completedItems.forEach(item => item.remove() );
         });
