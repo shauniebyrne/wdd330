@@ -1,0 +1,57 @@
+/* transfrom practice */
+h1:hover span {
+    color: #484848;
+    transform: rotate(10deg) translateX(40px) scale(1.5);
+    display: inline-block;
+    /*transform: skew(15deg, 4deg); overrode the above transform when not commented out */
+}
+
+/* transition practice */
+h1 span {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform, color;
+    transition-duration: 2s, 0.1s;
+    transition-timing-function: ease-out, linear;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s, 50ms;
+    /* or simply use the transition shorthand which works like borders
+    transition: transform 2s ease-out 0.5s; NOTE: duration must come before delay */
+    /* using two properties in the transition property shorthand way
+    transition: transform 2s ease-out 0.5s, color 0.1s linear 50ms; */
+}
+
+/* animation practice */
+@keyframes bike {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -360px 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+h1:after {
+    content: '';
+    width: 90px;
+    height: 92px;
+    background-image: url(../practice/transform_img/bike.png);
+    display: block;
+    margin: auto;
+    animation: 
+        0.4s steps(4, end) infinite 50ms bike,
+        8s linear infinite 50ms move;
+    animation-play-state: paused;
+}
+
+h1:hover:after {
+    animation-play-state: running;
+}
