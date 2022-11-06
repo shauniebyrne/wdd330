@@ -11,6 +11,7 @@
         <a href="../index.html">Home</a>  
         <a href="team_assignment/index.html">Team Assignment</a>
         <a href="practice/transform_practice.html">Transform-Transition-Animation Practice</a>
+        <a href="practice/canvas.html">Canvas Practice</a>
     </nav>
    <h1>Week 8 Notes</h1>
    <h2>Please Note: I spent eqal amounts of time on practice, our assignment, and reading this week. See samples above </h2> 
@@ -61,12 +62,26 @@
     <p>This was  FASCINATING to me. I have seen this coding before but am excited to now understand what it all means!!!!!</p>
    <h3>Chapter 12: Canvas, SVG, and Drag and Drop</h3>
    <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Canvas API: used to draw through JavaScript; this improves the performance of websites by avoiding the need to download images off the network</li>
+    <li>Can draw shapes, lines, arcs, text, gradients, patterns, and manipulate pixels in images and videos</li>
+    <li>Use Canvas in JS by using but must first put it in HTML by using <canvas></canvas> - what is put in the middle only shows if canvas isn't supported</li>
+    <li>Set Canvas width and height in HTML not CSS (default is 300 by 150)</li>
+    <li>Context is where your drawing is rendered</li>
+    <li>WebGL does 3D but it is not widely supported yet</li>
+    <li>In Canvas, the top left corner is 0,0 (x moves horizontally, y moves vertically)</li>
+    <li>SVG: Scalable Vector Graphics</li>
+    <li>SVG: a specific file format that allows you to describe vector graphics using XML (vector graphics hold their quality even if they are blown up or shrunk down)</li>
+    <li>Can draw paths, shapes, text, gradients, and patterns</li>
+    <li>XML: eXtensible Markup Language; a markup metalanguage; a system meant to annotate text</li>
+    <li>Images created with SVG are available via the DOM; unlike canvas</li>
+    <li>Drawing a circle in SVG is arguably easier than in canvas</li>
+    <li>SVG can get very complicated!!</li>
+    <li>When is it better to use Canvas or SVG? It depends on what you're doing</li>
+    <li>Canvas is faster and generally the better choice if youre loking to design a game requiring lots of animations</li>
+    <li>SVG is accessible via the DOM, has a more complete set of tools to work with, but you can't manipulate SVG images the way you can manipulate pixels on canvas</li>
+    <li>Drag and Drop API: allows us to specify that certain elements are draggable, and then specify what should happen when these draggable elements are dragged over or dropped onto other elements on the page</li>
+    <li>2 majo kinds of functionality: dragging files from your computer into a web page or dragging elements into other elements on the same page</li>
+    <li>Draggable is not a Boolean so you must set it to true</li>
    </ul>
 </body>
 </html> 
