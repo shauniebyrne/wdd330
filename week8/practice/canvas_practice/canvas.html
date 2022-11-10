@@ -9,8 +9,93 @@
     <script defer src="canvas.js"></script>
 </head>
 <body>
+    <h1>Box 1</h1>
     <canvas id="myCanvas" class="myCanvas" width="200" height="200">
         Sorry! Your browser doesn't support Canvas.
     </canvas>
+
+    <h1>Box 2</h1>
+    <canvas width="200" height="200" id="demo2" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+
+    <h1>Box 3</h1>
+    <canvas width="200" height="200" id="demo3" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+
+    <h1>Box 4</h1>
+    <canvas width="200" height="200" id="demo4" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+
+    <h1>Box 5</h1>
+    <canvas width="200" height="200" id="demo5" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <button name="saveButton" id="saveButton">Save Drawing</button>
+    
+    <h1>Box 6</h1>
+    <canvas width="200" height="200" id="demo6" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <img src="images/html5-logo.png" id="myImageElem">
+    
+    <h1>Box 7</h1>
+    <canvas width="200" height="200" id="demo7" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+        <img src="images/html5-logo.png" id="myImageElem"> <!--Image in here just incase canvas doesn't work, still want the viewers to see the image-->
+    </canvas>
+    <img src="images/html5-logo.png" id="secondImage">
+
+    <!--Video Container to change to black and white in canvas-->
+    <div class="vc">
+        <canvas id="canvasOverlay" width="373" height="280"></canvas>
+        <video width="373" height="280" preload="" id="video" poster="images/ford-plane-still.jpg" controls>
+          <!-- MP4 must be first for iPad!
+          <source src="https://www.videezy.com/abstract/43457-abstract-digital-fire-flame-background-video-loop" type="video/mp4"> Safari / iOS video
+            <source src="https://www.youtube.com/channel/UC_BSB6TR6pAqEDCgpH2Z2iQ" type="video/ogg"> Firefox / Opera / Chrome10 -->
+        </video>
+    </div>
+
+    <!--SVG Practice-->
+    <!--Making a circle-->
+    <h1>SVG Practice - made right in HTML</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+        <circle cx="50" cy="50" r="50" fill="red"/>
+    </svg>
+
+    <!--Making a rectangle-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+        <desc>Drawing a Rectangle</desc>
+            <rect x="10" y="10" width="100" height="100" fill="blue" stroke="red" stroke-width="3" />
+    </svg>
+
+    <!--Making a Spinner for load waiting-->
+    <article class="ad-ad4">
+        <div id="mapDiv">
+            <h1 id="geoHeading">Where in the world are you?</h1>
+            <form id="geoForm">
+                <input type="button" id="geoButton" value="Tell us!">
+            </form>
+            <div class="spin" id="spinner"></div>
+        </div>
+    </article>
+
+    <!--Drag and Drop practice-->
+    <article id="ac3">
+        <h1>Wai-Aria? HAHA!</h1>
+        <h2 id="catHeading">Form Accessibility</h2>
+                
+        <img src="images/cat.png" alt="WAI-ARIA Cat" id="cat">
+                
+        <div class="content">
+            <p id="mouseContainer" class="mc">
+                <img src="images/mouse.png" alt="mouse treat" id="mouse1" draggable="true">
+                <img src="images/mouse.png"  alt="mouse treat" id="mouse2" draggable="true">
+                <img src="images/mouse.png" alt="mouse treat" id="mouse3" draggable="true">
+            </p>
+        </div>
+    </article>
 </body>
 </html>

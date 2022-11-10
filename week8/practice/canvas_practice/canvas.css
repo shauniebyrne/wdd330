@@ -1,4 +1,19 @@
 /* Canvas Practice */
 .myCanvas {
     border: dotted 2px black;
+    margin: 0 20px;
+}
+
+h1 {
+    padding-left: 10px;
+}
+
+.spin {
+    position: absolute;
+    top: 8px;
+    left: 55px;
+}
+
+.draganddrop .mc {
+    text-align: center;
 }
