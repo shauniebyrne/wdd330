@@ -9,29 +9,64 @@
 <body>
     <nav>
         <a href="../index.html">Home</a>  
-        
+        <a href="teamAssignment/index-START.html">Team Assignment</a>
+        <a href="practice/animation/index.html">Animation Practice</a>
+        <a href="practice/web_workersPractice/factors.html">Web Workers Practice</a>
+        <a href="practice/websocket_practice/websocket.html">Websocket Practice</a>
+        <a href="practice/canvas_practice/index.html">Canvas Practice</a>
     </nav>
    <h1>Week 9 Notes</h1>
    <h2>Please Note: I spent equal amounts of time on practice, our assignment, and reading this week. See samples above </h2> 
    <h2>JavaScript: Novice to Ninja</h2>
    <h3>Chapter 9: The Window Object</h3>
    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Global Object: in a brower it is the window object (represents the browser window that contains a web page)</li>
+        <li>BOM: Browser Object Model - a collection of properties and methods that contain info about the browser and computer screen</li>
+        <li>Every browser window, tab, popup, frame, and iframe has a Window Object</li>
+        <li>Create a popup in the web page using window.alert('your popup message goes here'); that stops the program until user clicks "Close"</li>
+        <li>window.confirm("you quesiton here"); will stop the execution of the program and display a confirmation dialog that gives your question and an OK or Cancel button (boolean says true for Ok and false for Cancel)
+            A great time to use this is in making sure the user actually wants to delete something.
+        </li>
+        <li>window.prompt('needed input here'; stops execution, dipslays dialog box that shows your message, an input field for user to answer, then click either OK (text returned as a string) or Cancel (returned as null)</li>
+        <li>window.location() property is an object that contains info about the URL of the current page; window.location.href returns the full URL as a string</li>
+        <li>window.open() - opens a new window; the first parament is the new page to be opened, next parameter is the window title, and last is a list of attributes
+            ex. const popup = window.open('https://sitepoint.com', 'SitePoint', 'width=400,height=400,resizable=yes');
+        </li>
+        <li>find out a screen height and width in pixels using window.screen.height and window.screen.width</li>
+        <li>Each window object has a document object or DOM</li>
+        <li>Cookies: small files that are saved locally on a user's computer (this info can then be retrieved between requests)</li>
+        <li>Cookies can be used to personalize a user's browsing experience, store user preferences, keep track of user choices, authentication and tracking users </li>
+        <li>Cookies are slowly being replaced with localstorage</li>
+        <li>EU Cookie Directive is why some webpages as you if you want to store info on cookies</li>
+        <li>To assign cookies, use document.cookie = 'thing you want stored on computer'(ex. 'name=Superman');</li>
+        <li>Acts like a string so adding more cookies later on only adds to it, it doesn't replace anything</li>
+        <li>Change a cookie value by using the same name but a different value (ex. 'name=Batman' will replace 'name=Superman')</li>
+        <li>To see cookies in any website, open the browser console and type document.cookie</li>
+        <li>For security reasons, cookies can only be read by pages inside the same directory and domain as the file was set</li>
+        <li>Adding the string secure to the end of a cookie will ensure that it only transmitts over a secure HTTPS network (ex. document.cookie = 'name=Batman; secure';)</li>
+        <li>A cookie can only be removed by setting it to expire to a time in the past unless it is a session cookie, then it will expire when the tab or window is closed</li>
+        <li>window.setTimeOut() and window.setInterval() can be used to animate elements on a webpage.</li>
+        <li>window.requestAnimationFrame() method is much smoother and a number of improvements (from setInterval()) for animations</li>
+        <li>It is typically better to do animation using CSS (transform, transition, animation, Canvas, or SVG)</li>
     </ul>
     <h3>Chapter 14: HTML5 API's</h3>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>HTML5.1 is the latest incarnation of the HyperText Markup Language</li>
+        <li>data- attributes help to create custom (your own) data into a web page that can be used by JavaScript; are ignored by the browser</li>
+        <li>Web Storage API allows key-value pairs to be stored on device (localstorage)</li>
+        <li>Geolocation API allows you to access the geographic coordicantes of the user's device (with permission from them)</li>
+        <li>Web Worker API can be used to perfrom computationally intensive task in the background which helps with website responsiveness</li>
+        <li>Websocket: new protocol for communicating over the internet; allow real-time, two-way communication with a server (also known as push messaging</li>
+        <li>Notification API allows you to display notifications on the user's system; usually a popup in the corner of the screen</li>
+        <li>New audio and video elements can be used to embed audio tracks and videos onto a webpage (control playback using JS through Media API)</li>
+        <li>Shim or Polyfill: a piece of code that adds support of missing features to old browsers</li>
+        <li>The value in the key-value pairs for local storage can only be strings</li>
+        <li>Store JS objects in local storage by saving it as a JSON</li>
+        <li>Geolocation API is used my google maps</li>
+        <li>Canvas element was introduced to allow graphics to be drawn onto a web page in real time using JS</li>
+        <li>Canvas is being used more and more to draw data charts that are updated in real time and for animating HTML5 games</li>
+        <li>Shim: a piece of code that adds some missing functionality to a browser</li>
+        <li>Polyfill: a shim thta achieves the same functionality, while also using the API commands that would be used if teh feature was supported natively</li>
     </ul>
 </body>
 </html> 

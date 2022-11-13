@@ -49,6 +49,7 @@ addTaskButton.addEventListener('click', function() {
         myList.removeChild(allTogether);
         toDoList.pop();
         savedList(toDoList);
+        //delete localStorage.ToDoItem[]
     });
 
     checkButton.addEventListener('click', function(e) {
