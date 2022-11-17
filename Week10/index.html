@@ -36,15 +36,19 @@
        
     <h3>MDN: Using Fetch</h3>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>A global fetch() method provides easy, logical ways to fetch resources asynchronously accross networks</li>
+        <li>The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings (see fetch_practice.js for examples of these options)</li>
+        <li>Can make a copy of request which is pretty useful because request and response bodies can only be used once</li>
+        <li>clone() method creates a copy</li>
+        <li>Both above forms of creating a copy will fail if the body of the original request or response has already been read</li>
+        <li>Headers interface: allows you to create your own headers object via the Headers() constructor</li>
+        <li>Headers Object: a simple multi-map of names to values</li>
+        <li>A good way to use headers is to check whether the content type is correct before you process it further</li>
+        <li>Because headers can be sent in requests and received in responses, and have limitations about what info can and should be mutable, header objects have a guard property</li>
+        <li>Response instances are returned when fetch() promises are resolved (use Response.status, Response.statusText, or Response.ok)</li>
+        <li>Both requests and responses may contain body data</li>
+        <li>A body is an instance of any of these types: ArrayBuffer, TypedArray, DataView, Blob, File, String (string literal), URLSearchParams, and FormData</li>
+        <li>Body example: fetch('/login', { method: 'POST', body: form });</li>
+        <li>Fetch API support can be deteced by checking for the existence of Headres, Request, Response, or fetch() on the Window or Worker scope (ex. if (window.fetch) { run my fetch request here } else { do something with XMLHttpRequest?})</li>
     </ul>
        
