@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation through JS</title>
+    <meta name="description" content="Validating using constraint validation API in JS">
+<style>
+    input {
+        display: block;
+        margin: 5px;
+    }
+
+    input:invalid {
+        border: 2px dashed red;
+    }
+
+    input:focus:invalid {
+        outline: none;
+    }
+
+    input:valid {
+        border: 2px solid black;
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
+    <form action="#">
+        <label for="mail">I would like you to provide me with an email address:</label>
+        <input type="email" id="mail" name="mail">
+        <button>Submit</button>
+    </form>
+
+<script>
+    const email = document.getElementById('mail');
+    email.addEventListener('input', (event) => {
+        if (email.validity.typeMismatch) {
+            email.setCustomValidity("I am expecting an email address!");
+            email.reportValidity();
+        } else {
+            email.setCustomValidity("");
+        }
+    });
+</script>    
+</body>
+</html>
