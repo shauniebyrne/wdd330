@@ -1,0 +1,68 @@
+/* Color: 
+Font: Outer Space Crayola #303633 or black
+Background for font: Magic Mint #8BE8CB
+Card Background: Pewter Blue #7EA2AA
+Cool Grey #888DA7
+*/
+
+/* Headings:font-family: 'Anton', sans-serif; 
+Body: font-family: 'PT Sans Narrow', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body#for-fun {
+    background-color: #888DA7;
+}
+
+body#weather {
+    background-image: url('.././images/lightning.jpg');
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+nav {
+    background-color: #888DA7;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 0.75rem;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+}
+
+nav ul li a:visited {
+    color: black;
+    background-color: #7EA2AA;
+}
+
+nav ul li a:hover {
+    color: #303633;
+    background-color: #8BE8CB;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 10rem;
+    color: #303633;
+    background-color: #8BE8CB;
+    text-align: center;
+    margin: 0;
+}
+

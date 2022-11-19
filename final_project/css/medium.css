@@ -1,0 +1,9 @@
+@media screen and (min-width: 32.5em) {
+    header nav ul {
+        display: flex;
+    }
+
+    header nav ul li {
+        flex: 1 1 auto;
+    }
+}
