@@ -6,4 +6,17 @@
     header nav ul li {
         flex: 1 1 auto;
     }
+
+    p#date {
+        font-size: 3rem;
+    }   
+    
+    @keyframes move {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(500px);
+        }
+    }
 }

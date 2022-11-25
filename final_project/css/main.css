@@ -1,8 +1,9 @@
 /* Color: 
 Font: Outer Space Crayola #303633 or black
 Background for font: Magic Mint #8BE8CB
-Card Background: Pewter Blue #7EA2AA
+Card Background: Blue Munsell #1188AA
 Cool Grey #888DA7
+Marigold #ECA400
 */
 
 /* Headings:font-family: 'Anton', sans-serif; 
@@ -13,11 +14,12 @@ Body: font-family: 'PT Sans Narrow', sans-serif;*/
     padding: 0;
 }
 
-
+/* for fun page */
 body#for-fun {
     background-color: #888DA7;
 }
 
+/* weather pages */
 body#weather {
     background-image: url('.././images/lightning.jpg');
     background-size: cover;
@@ -48,7 +50,7 @@ nav ul li a {
 
 nav ul li a:visited {
     color: black;
-    background-color: #7EA2AA;
+    background-color: #1188AA;
 }
 
 nav ul li a:hover {
@@ -57,12 +59,104 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Anton', sans-serif;
-    font-size: 10rem;
+    color: #303633;
+    background-color: #8BE8CB;
+    text-align: center;
+    margin: 0;  
+}
+
+p {
+    padding: 5px;
+}
+
+p#date {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6.75rem;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+h3 {
+    font-size: 4rem;
+    margin-top: 50px;
+    margin-left: 5px;
+    padding: 5px;
+    font-family: 'Anton', sans-serif;
+}
+
+/* for fun page */
+h1#moving-heading:hover {
+    transform: skew(15deg, 5deg);
+    color: #1188AA;
+}
+
+/* home page */
+div#svg-fun {
+    display: flex;
+    justify-content: space-around;  
+    margin-top: 50px;
+}
+
+section {
+    border:#303633 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #1188AA;
+    box-shadow: 5px 5px 10px black;
+    width: 35%;
+}
+
+footer {
     color: #303633;
     background-color: #8BE8CB;
     text-align: center;
     margin: 0;
+    padding: 5px;
 }
 
+/* home page */
+@-webkit-keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+h3#moving-sun:after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/sun.png);
+    display: block;
+    -webkit-animation: 3s linear infinite 50ms move;
+    animation: 3s linear infinite 50ms move;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+h3#moving-sun:hover:after {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
