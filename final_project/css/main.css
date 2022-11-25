@@ -59,7 +59,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-h1, h2 {
+h1, h3 {
     font-family: 'Anton', sans-serif;
     color: #303633;
     background-color: #8BE8CB;
@@ -71,23 +71,27 @@ p {
     padding: 5px;
 }
 
-p#date {
+h2 {
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
+    /*how to make text change color from left to right */
+    /*background: linear-gradient(to right, white, #303633);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
 }
 
 h1 {
     font-size: 6.75rem;
 }
 
-h2 {
+h3 {
     font-size: 2rem;
     padding: 5px;
     border-radius: 15px;
 }
 
-h3 {
+h4 {
     font-size: 4rem;
     margin-top: 50px;
     margin-left: 5px;
@@ -144,7 +148,7 @@ footer {
     }
 }
 
-h3#moving-sun:after {
+h4#moving-sun:after {
     content: '';
     width: 200px;
     height: 200px;
@@ -156,7 +160,7 @@ h3#moving-sun:after {
     animation-play-state: paused;
 }
 
-h3#moving-sun:hover:after {
+h4#moving-sun:hover:after {
     -webkit-animation-play-state: running;
     animation-play-state: running;
 }
