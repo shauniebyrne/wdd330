@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
+    <script defer src="js/drag_drop.js"></script>
     <script type="module" src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,19 +28,19 @@
                 <li><a href="forfun.html">For Fun</a></li>
             </ul>
         </nav>
-        <h2 id="date"></h2>
+        <h2 id="date" class="color-change"></h2>
     </header>
     <main>
         <div id="svg-fun">
-            <section>
-                <h3>Daytime</h3>
-                <svg id="sun" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
-                    <circle cx="50" cy="50" r="50" fill="yellow" />
+            <section class="sun-moon">
+                <h3 id="change-heading">Daytime</h3>
+                <svg  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                    <circle id="sun"  cx="50" cy="50" r="50" fill="yellow" />
                 </svg>
             </section>
-            <section draggable="true">
+            <section draggable="true" id="moon" class="sun-moon">
                 <h3>Nighttime</h3>
-                <svg id="moon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
                     <circle cx="50" cy="50" r="50" fill="grey" />
                 </svg>
             </section>

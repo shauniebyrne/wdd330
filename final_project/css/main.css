@@ -17,6 +17,8 @@ Body: font-family: 'PT Sans Narrow', sans-serif;*/
 /* for fun page */
 body#for-fun {
     background-color: #888DA7;
+    font-size: 16px;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 /* weather pages */
@@ -71,18 +73,21 @@ p {
     padding: 5px;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-    /*how to make text change color from left to right */
-    /*background: linear-gradient(to right, white, #303633);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; */
-}
-
 h1 {
     font-size: 6.75rem;
+}
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2.color-change {
+    /*how to make text change color from left to right */
+    background: linear-gradient(to right, white, #303633);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 h3 {
@@ -97,6 +102,14 @@ h4 {
     margin-left: 5px;
     padding: 5px;
     font-family: 'Anton', sans-serif;
+}
+
+h5 {
+    font-family: 'Anton', sans-serif;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 /* for fun page */
@@ -118,6 +131,9 @@ section {
     padding: 5px;
     background-color: #1188AA;
     box-shadow: 5px 5px 10px black;
+}
+
+section.sun-moon {
     width: 35%;
 }
 
@@ -129,7 +145,7 @@ footer {
     padding: 5px;
 }
 
-/* home page */
+/* -- home page -- */
 @-webkit-keyframes move {
     0% {
         transform: translateX(0);
@@ -163,4 +179,16 @@ h4#moving-sun:after {
 h4#moving-sun:hover:after {
     -webkit-animation-play-state: running;
     animation-play-state: running;
+}
+
+/* -- World Weather Page -- */
+div#card-holder {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
