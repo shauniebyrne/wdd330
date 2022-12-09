@@ -20,13 +20,13 @@
         }
     }
 
-    div#card-holder {
+    div#card-holder, div#info-holder {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 10px;
     }
 
-    div.grow:hover {
+    .grow:hover {
         transform: scale(1.25);
     }
 }

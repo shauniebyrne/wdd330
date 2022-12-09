@@ -125,12 +125,13 @@ div#svg-fun {
     margin-top: 50px;
 }
 
-section {
+section, form {
     border:#303633 2px solid;
     border-radius: 25px;
     padding: 5px;
     background-color: #1188AA;
     box-shadow: 5px 5px 10px black;
+    margin: 5px;
 }
 
 section.sun-moon {
@@ -191,4 +192,28 @@ section img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* -- Your Weather Page -- */
+form {
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+}
+form label {
+    display: block;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+form input, form button {
+    border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+form button {
+    background-color: #8BE8CB;
+    font-weight: bold;
+    text-align: center;
 }

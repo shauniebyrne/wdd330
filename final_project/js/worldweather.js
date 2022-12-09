@@ -1,5 +1,3 @@
-//import { default as getJSON } from "./utilities.js";
-
 //fetch url function
 function getJSON(url, city) {
     fetch(url)
@@ -11,8 +9,7 @@ function getJSON(url, city) {
             }
         })
         .then((data) => {
-            weatherCardHTML(data, city)
-;
+            weatherCardHTML(data, city);
         })
         .catch(function(error) {
             console.log(error);

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
+    <script defer src="js/yourweather.js"></script>
     <script type="module" src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +32,12 @@
         <h2 id="date" class="color-change"></h2>
     </header>
     <main>
-        
-
+        <form>
+           <label for="city-of-choice">Type the city name you would like weather information on: (make sure to capitalize the first letter)</label>
+           <input type="text" id="city-of-choice" name="city-of-choice" pattern="[A-Z][a-z]" placeholder="Tempe"  required >
+            <button id="show-info" type="button">See Weather</button>
+        </form>
+        <div id="info-holder"></div>
     </main>
     <footer>
         <p>Weather Data Source: <a target="blank" href="https://openweathermap.org/">OpenWeatherMap</a></p>
