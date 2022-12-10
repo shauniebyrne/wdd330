@@ -53,8 +53,8 @@ function weatherCardHTML (card, city) {
 }
 
 //create function for each city
-function taberCard() {
-    getJSON("https://api.openweathermap.org/data/2.5/weather?q=Taber&units=metric&appid=502854408fb5e148e3e7e1ca21917b63", 'Taber');
+function calgaryCard() {
+    getJSON("https://api.openweathermap.org/data/2.5/weather?q=Calgary&units=metric&appid=502854408fb5e148e3e7e1ca21917b63", 'Calgary');
 }
 
 function londonCard() {
@@ -93,7 +93,7 @@ function madridCard() {
 }
 
 //call functions
-taberCard();
+calgaryCard();
 londonCard();
 tempeCard();
 saoPauloCard();

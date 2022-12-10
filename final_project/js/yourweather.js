@@ -76,7 +76,7 @@ function cityWeather(data) {
     feelsLike.innerHTML = `Feels Like: ${data.main.feels_like.toFixed()} &#8451`;
     tempMax.innerHTML = `Maximum: ${data.main.temp_max.toFixed()} &#8451`;
     tempMin.innerHTML = `Minimum: ${data.main.temp_min.toFixed()} &#8451`;
-    humidity.textContent = `Humidity: ${data.main.humidity}%`;
+    humidity.textContent = `Humidity: ${data.main.humidity} %`;
 
     //wind info
     heading3.textContent = 'Wind Information';
@@ -85,7 +85,7 @@ function cityWeather(data) {
 
     //cloud info
     heading4.textContent = 'Cloud Cover';
-    cloud.textContent = `Cloudiness: ${data.clouds.all}%`;
+    cloud.textContent = `Cloudiness: ${data.clouds.all} %`;
 
     //system info
     heading5.textContent = 'Sunrise/Sunset';
@@ -150,8 +150,7 @@ function usersChoice () {
     let userValue = document.getElementById('city-of-choice').value;
 
     //create heading for the city chosen
-    let cityHeading = document.createElement('h2');
-    cityHeading.classList.add('color-change');
+    let cityHeading = document.createElement('h3');
     cityHeading.textContent = userValue;
     document.getElementById('info-holder').appendChild(cityHeading);
     
@@ -159,4 +158,12 @@ function usersChoice () {
     localStorage.setItem('cityChoice', userValue);
 }
 
-window.onload = getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${localStorage.getItem('cityChoice')}&units=metric&appid=502854408fb5e148e3e7e1ca21917b63`);
+window.onload = savedCityInfo;
+
+function savedCityInfo () {
+    let cityHeading = document.createElement('h3');
+    cityHeading.textContent = localStorage.getItem('cityChoice');
+    document.getElementById('info-holder').appendChild(cityHeading);
+
+    getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${localStorage.getItem('cityChoice')}&units=metric&appid=502854408fb5e148e3e7e1ca21917b63`)
+}
