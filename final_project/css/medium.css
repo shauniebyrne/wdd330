@@ -29,4 +29,8 @@
     .grow:hover {
         transform: scale(1.25);
     }
+
+    table {
+        font-size: 1.5rem;
+    }
 }

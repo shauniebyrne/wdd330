@@ -206,14 +206,43 @@ form label {
     padding: 5px;
 }
 
-form input, form button {
+form input, button {
     border-radius: 15px;
     font-size: 1.25rem;
     padding: 5px;
 }
 
-form button {
+button {
     background-color: #8BE8CB;
     font-weight: bold;
     text-align: center;
+}
+
+/* -- For Fun Page -- */
+.fun-button {
+    display: block;
+    margin: 10px auto;
+    font-size: 3rem;
+    color: #303633
+}
+
+table, th, td {
+    border: 3px solid #303633;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px auto;
+    background-color: #1188AA;
+    width: 80%;
+}
+
+th, td {
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+}
+
+th {
+    background-color: #8BE8CB;
 }

@@ -15,4 +15,13 @@
     h1 {
         font-size: 10rem;
     }
+
+    table {
+        font-size: 2.5rem;;
+    }
+
+    h3.bigger-size {
+        font-size: 4rem;
+    }
+
 }

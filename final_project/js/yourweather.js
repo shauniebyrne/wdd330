@@ -143,6 +143,7 @@ function cityWeather(data) {
     mainDiv.appendChild(section5);
 }
 
+//code for when the button is pressed
 document.getElementById('show-info').addEventListener('click', usersChoice)
 
 function usersChoice () {
