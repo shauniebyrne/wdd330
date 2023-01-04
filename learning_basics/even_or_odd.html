@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd - Practice</title>
+    <script>
+        
+        let output = document.getElementById('result_display');
+
+        function checkNumber() {
+            let userNumber = document.getElementById('name_input').value;
+            if (userNumber != "") {
+                if (userNumber != 0 && userNumber%2 === 0) { //% is Math Modulo operator that checks for the remainder, the computer knows it is even when the remainder is 0
+                    return output.innerHTML = `${userNumber} is even`;
+                } else if (userNumber != 0 && userNumber%2 == 1) {
+                    return output.innerHTML = `${userNumber} is odd`;
+                } else {
+                    return output.innerHTML = `${userNumber} is not even or odd`;
+                }
+            } else {
+                ouput.innerHTML = "Please enter a number."
+            }
+        }
+    </script>
+    <style></style>
+</head>
+<body>
+    <h1>Even or Odd???</h1>
+    Enter A Number:<input id="name_input" type="text">
+    <button onclick="checkNumber()">Check It!</button>
+    <section id="result_display"></section>
+</body>
+</html>
